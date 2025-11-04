@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kunjatta’s Typing Magic ✨</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ffb6f9, #ff8ac9);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        #game-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            width: 80%;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+        }
+
+        #word {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 18px;
+            padding: 10px;
+            border: none;
+            border-radius: 10px;
+            width: 80%;
+            outline: none;
+            text-align: center;
+        }
+
+        #score {
+            margin-top: 20px;
+            font-size: 22px;
+        }
+
+        #message {
+            font-size: 20px;
+            margin-top: 10px;
+            color: #ffe6f2;
+        }
+
+        .back-btn {
+            background: linear-gradient(145deg, #bd3484, #e440b5);
+            border: none;
+            border-radius: 25px;
+            padding: 12px 28px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 0 0 20px rgba(255, 182, 233, 0.7);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            box-shadow: 0 0 30px #ff9ad5, 0 0 50px #ffd0ec;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🦄 Kunjatta’s Typing Magic ✨</h1>
+    <p>Type the magical word before it changes!</p>
+
+    <div id="game-box">
+        <div id="word"></div>
+        <input type="text" id="input" placeholder="Type here..." autocomplete="off">
+        <div id="score">Score: 0</div>
+        <div id="message"></div>
+    </div>
+    <br>
+    <br>
+    <button class="back-btn" onclick="window.location.href='main.html'">🏠 Back to Home</button>
+
+
+    <script>
+        const words = [
+            "Unicorn",
+            "Sparkle",
+            "Kunjatta",
+            "Princess",
+            "Dreamy",
+            "Giggles",
+            "Sunshine",
+            "Cupcake",
+            "Twinkle",
+            "Magic",
+            "Happiness",
+            "Fairy",
+            "Starlight",
+            "CottonCandy",
+            "LoveBug",
+            "PinkiePie",
+            "Smiles",
+            "HugMonster",
+            "Butterfly",
+            "CutiePatootie",
+            "Sweetheart",
+            "Moonbeam",
+            "Snuggle",
+            "Lovely",
+            "Rainbow",
+            "Blush",
+            "Petal",
+            "CuddleBear",
+            "Charm",
+            "HeartPop"
+        ];
+
+
+        let currentWord = "";
+        let score = 0;
+
+        function newWord() {
+            currentWord = words[Math.floor(Math.random() * words.length)];
+            document.getElementById("word").textContent = currentWord;
+        }
+
+        document.getElementById("input").addEventListener("input", function () {
+            if (this.value.toLowerCase() === currentWord.toLowerCase()) {
+                score++;
+                document.getElementById("score").textContent = "Score: " + score;
+                document.getElementById("message").textContent = "✨ Great job, Kunjatta! ✨";
+                this.value = "";
+                newWord();
+            }
+        });
+
+        newWord(); // start game
+    </script>
+
+</body>
+
+</html>

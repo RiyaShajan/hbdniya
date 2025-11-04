@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Wall 💖</title>
+  <style>
+    body {
+      background: pink url('bguni.jpeg') repeat;
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 50px;
+    }
+
+    .memory-card {
+      width: 200px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .inner-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+      cursor: pointer;
+    }
+
+    .memory-card:hover .inner-card {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      backface-visibility: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .front {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .front img {
+      width: 100%;
+      height: 70%;
+      object-fit: cover;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .front h3 {
+      margin: 10px 0;
+    }
+
+    .back {
+      background: #ffe6f2;
+      color: #555;
+      transform: rotateY(180deg);
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .back-btn {
+      background: linear-gradient(145deg, #bd3484, #e440b5);
+      border: none;
+      border-radius: 25px;
+      padding: 12px 28px;
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 30px;
+      box-shadow: 0 0 20px rgba(255, 182, 233, 0.7);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .back-btn:hover {
+      box-shadow: 0 0 30px #ff9ad5, 0 0 50px #ffd0ec;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="1.jpeg" alt="memory 1">
+        <h3>Happy Birthday to My Sunshine! <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>“Happy Birthday to my sweet little sister. You are my sunshine.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="2.jpeg" alt="memory 2">
+        <h3>To the Best Little Sister Ever!<br> 💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>To my little star, happy birthday! You light up my world.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="3.jpeg" alt="memory 3">
+        <h3>Cheers to My Little Star on Her Big Day <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>You’re the best gift I ever got. Happy birthday, little one💕</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="4.jpeg" alt="memory 4">
+        <h3>Celebrating You, My Tiny Bundle of Joy <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>“No matter how tall you grow, you’ll always be my baby.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="5.jpeg" alt="memory 5">
+        <h3>Happy Birthday, Little Princess! <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>Happy birthday to the funniest, cutest little girl I know.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="6.jpeg" alt="memory 6">
+        <h3>To My Darling Sister, Smiles and Surprises Ahead💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>Wishing you a birthday filled with magic, laughter, and cake!!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="7.jpeg" alt="memory 7">
+        <h3>Cake, Candles, and My Favorite Girl! <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>Even as you grow, you’ll always be my little sister</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="8.jpeg" alt="memory 8">
+        <h3>Happy Birthday to My Forever Friend <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>You are tiny but you have the biggest heart. Happy birthday!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="9.jpeg" alt="memory 9">
+        <h3>Hugs and Happiness for My Little Sis <br>💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>May your birthday be as bright as your smile.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="memory-card">
+    <div class="inner-card">
+      <div class="front">
+        <img src="10.jpeg" alt="memory 10">
+        <h3>Wishing My Sweet Little Sister a Magical Birthday💗💗💗</h3>
+      </div>
+      <div class="back">
+        <p>Happy birthday, little sis. You’re my pride and joy!💕</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button class="back-btn" onclick="window.location.href='main.html'">🏠 Back to Home</button>
+
+</body>
+
+</html>
